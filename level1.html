@@ -44,8 +44,6 @@ body {
 		var scoreText;
 		var gameOver;
 		var upgrade;
-		var upgrade2;
-		var upgrade3;
 		
 		var ACCLERATION = 600;
 		var DRAG = 400;
@@ -134,7 +132,7 @@ body {
 			upgrade3.createMultiple(3,'upgrade3');
 			
 			
-			//  enemies
+			//  The Baddies !1!1!
 			greenEnemies = game.add.group();
    			greenEnemies.enableBody = true;
        	                greenEnemies.physicsBodyType = Phaser.Physics.ARCADE;
@@ -590,13 +588,13 @@ body {
 	    	        score += enemy.damageAmount * 10;
 	    	        scoreText.render();	
 			
-			if (score >= 800 && player.weaponLevel<2) {
+			if (score >= 1000 && player.weaponLevel == 1 && score%300 == 0) {
           	   		launchUpgrade()
 			}
-			if (score >= 5000 && player.weaponLevel<3){
+			if (score >= 5000 && player.weaponLevel == 2 && score%500 == 0){
 				launchUpgrade2()
 			}
-			if (score >= 12000 && player.weaponLevel<4){
+			if (score >= 10000 && player.weaponLevel == 3 && score%1000 == 0){
 				launchUpgrade3()
 			}
 			
